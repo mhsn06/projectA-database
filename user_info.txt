@@ -4,4 +4,4 @@ db.userInfo.insert(
     "email" : "mofiz@gmail.com",
     "password" : "123456"
 })
-db.userInfo.find()
+db.userInfo.find({"email" : "mofiz@gmail.com"})
