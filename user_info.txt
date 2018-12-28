@@ -1,0 +1,7 @@
+db.userInfo.insert(
+{
+    "name" : "mofiz",
+    "email" : "mofiz@gmail.com",
+    "password" : "123456"
+})
+db.userInfo.find({"email" : "mofiz@gmail.com"})
