@@ -1,8 +1,8 @@
 db.instituteinfo.insert(
 {
-    "institute_name" : "BRUR",
+    "institute_name" : "brur",
     "founded_year" : "2008",
-    "address" : "Park er mor",
-    "no._of_students" : "23429",
-    "no._of_teachers" : "132"
+    "address" : "park_er_mor",
+    "no_of_students" : "23429",
+    "no_of_teachers" : "132"
 })
