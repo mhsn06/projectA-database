@@ -1,9 +1,9 @@
 db.instituteinfo.insert(
 {
-    "Institute Name" : "BRUR",
-    "Founded Year" : "2008",
-    "Address" : "Park er mor",
-    "No. of students" : "23429",
-    "No. of teachers" : "132"
+    "institute_name" : "brur",
+    "founded_year" : "2008",
+    "address" : "park_er_mor",
+    "no_of_students" : "23429",
+    "no_of_teachers" : "132"
 })
-db.instituteinfo.find({"Institute Name" : "BRUR"})
+db.instituteinfo.find({"institute_name" : "brur"})
