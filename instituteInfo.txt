@@ -1,0 +1,8 @@
+db.instituteinfo.insert(
+{
+    Institute Name  BRUR,
+    Founded Year  2008,
+    Address  Park er mor,
+    No. of students  23429,
+    No. of teachers  132
+})
