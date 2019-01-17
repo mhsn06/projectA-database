@@ -15,13 +15,3 @@ db.PersonalInfo.insert(
 	"date_of_birth" : "23",
 	"relationship_status" : "s"
 })
-db.PersonalInfo.aggregate({
-    $lookup : {
-        from : "AccessInfo",
-        localField : "user",
-        foreignField : "_id",
-        as : "access_info"
-    }
-}
-)
-    
