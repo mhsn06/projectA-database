@@ -1,0 +1,8 @@
+db.public_webpage.insert(
+{
+    "institute_name" : "x",
+    "address" : "y",
+    "founded_year" : "z",
+    "description" : "p"
+})
+db.public_webpage.find()
