@@ -1,0 +1,12 @@
+db.session.insert(
+{
+    "id" : "01",
+    "token" : "a",
+    "expire_date" : "b",
+    "device" : "c"
+    
+})
+db.session.find(
+{"id" : "01"}
+)
+db.session.find({"id" : "01"},{"id":1,"token" : 1})
