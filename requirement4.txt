@@ -1,0 +1,6 @@
+db.public_webpage_moderation.insert(
+{
+    "page" : "x",
+    "verdict" : "y"
+})
+db.public_webpage_moderation.find({"page" : "x"})
