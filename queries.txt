@@ -1,0 +1,60 @@
+---------------------------------------
+relation_ref = ObjectId()
+db.AccessInfo.insert(
+{
+    "_id" : relation_ref,
+    "password" : "12345"
+})
+db.PersonalInfo.insert(
+{
+    "user" : relation_ref,
+    "email" : "as",
+    "phone_no" : "234",
+    "address" : "fsfsd",
+	"sex" : "m",
+	"profession" : "fjdsk",
+	"date_of_birth" : "23",
+	"relationship_status" : "s"
+})
+
+db.instituteinfo.insert(
+{
+    "institute_name" : "brur",
+    "founded_year" : "2008",
+    "address" : "park_er_mor",
+    "no_of_students" : "23429",
+    "no_of_teachers" : "132"
+})
+db.instituteinfo.find({"institute_name" : "brur"})
+--------------------------------------------------------
+
+db.session.insert(
+{
+    "id" : "01",
+    "token" : "a",
+    "expire_date" : "b",
+    "device" : "c"
+    
+})
+db.session.find(
+{"id" : "01"}
+)
+db.session.find({"id" : "01"},{"id":1,"token" : 1})
+---------------------------------------------------------
+
+db.public_webpage.insert(
+{
+    "institute_name" : "x",
+    "address" : "y",
+    "founded_year" : "z",
+    "description" : "p"
+})
+db.public_webpage.find()
+------------------------------------------------
+
+db.public_webpage_moderation.insert(
+{
+    "page" : "x",
+    "verdict" : "y"
+})
+db.public_webpage_moderation.find({"page" : "x"})
