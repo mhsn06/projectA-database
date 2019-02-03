@@ -1,8 +1,6 @@
 Welcome
+This is the database component of the test project.
 
-This document contains skills to work on this repo.
+This component is using a no sql database mongodb.
 
-
-Learn about ERD
-
-http://www.cs.uregina.ca/Links/class-info/215/erd/
+If you are new please take a look at the training directory

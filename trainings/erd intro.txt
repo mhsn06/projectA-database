@@ -1,0 +1,6 @@
+Learn ERD
+http://www.cs.uregina.ca/Links/class-info/215/erd/
+
+ERD drawing online:
+http://draw.io
+
