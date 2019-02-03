@@ -1,0 +1,103 @@
+﻿Database Design can be practice with the following tool.
+https://www.mongodb.com/download-center/community
+
+MongoDB basics
+
+Documents
+A record in MongoDB is a document, which is a data structure composed of field and value pairs.
+
+Ref: https://docs.mongodb.com/manual/introduction/
+
+Collections
+MongoDB stores documents in collections. Collections are analogous to tables.
+
+Ref: https://docs.mongodb.com/manual/core/databases-and-collections/
+
+Databases
+In MongoDB, databases hold collections of documents.
+
+Ref: https://docs.mongodb.com/manual/core/databases-and-collections/
+
+
+
+
+MongoDB CRUD Operations
+https://docs.mongodb.com/manual/crud/
+Aggregation
+https://docs.mongodb.com/manual/aggregation/
+Modeling
+https://docs.mongodb.com/manual/data-modeling/
+
+
+
+
+HW-2
+
+
+Description:
+Design a database to store students academic data and personal data in two different collection and build relation between them.
+Query: Show all data for a student.
+
+
+Soltion References:
+
+
+We store the relevent data in two different collection.
+
+
+We link both the collections by using Database References
+Get the short theory of database references using following link
+https://docs.mongodb.com/manual/reference/database-references/#manual-references
+
+
+Then we query to get joined data from both collection.
+Theory and hands on are available on the following link
+https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/#lookup-single-equality
+
+
+
+
+Hw2 implementation example:
+
+
+
+
+// this line generate a key to build relation
+relation_ref = ObjectId()
+
+
+
+
+// the following code insert academic information
+db.students_academy.insert({
+        "_id": relation_ref,
+        "result": "A+",
+        "fees" : "paid",
+        "info_1": "bla bla bla"
+})
+
+
+// the following code insert personal info for the above record
+
+
+db.students_personal.insert({
+        "roll": relation_ref,
+        "name" : "AB",
+        "father": "MR. A",
+        "mother": "MR. B"
+})
+
+
+//the following code query to find all information by a query
+db.students_personal.aggregate({
+ $lookup:{
+        from: "students_academy",
+        localField: "roll",
+        foreignField: "_id",
+        as : "academic_information"
+        }
+})
+
+
+//output should be like below:
+{ "_id" : ObjectId("5c21afcbb22ec61c09badb36"), "roll" : ObjectId("5c21afc9b22ec61c09badb35"), "name" : "AB", "father" : "MR. A", "mother" : "MR. B", "academic_information" : [ { "_id" : ObjectId("5c21afc9b22ec61c09badb35"), "result" : "A+", "fees" : "paid", "info_1" : "bla bla bla" } ] }
