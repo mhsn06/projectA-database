@@ -1,7 +1,10 @@
-﻿Database Design can be practice with the following tool.
-https://www.mongodb.com/download-center/community
+﻿This document describe mongodb basic concepts and necessary tools to work.
 
-MongoDB basics
+First section describes basic of mongodb.
+Second section provides instruction to connect and perform query to the actual database system.
+
+
+-------------------- MongoDB basics ------------------------------
 
 Documents
 A record in MongoDB is a document, which is a data structure composed of field and value pairs.
@@ -19,8 +22,6 @@ In MongoDB, databases hold collections of documents.
 Ref: https://docs.mongodb.com/manual/core/databases-and-collections/
 
 
-
-
 MongoDB CRUD Operations
 https://docs.mongodb.com/manual/crud/
 Aggregation
@@ -29,11 +30,8 @@ Modeling
 https://docs.mongodb.com/manual/data-modeling/
 
 
-
-
-HW-2
-
-
+Example
+--------------------------------
 Description:
 Design a database to store students academic data and personal data in two different collection and build relation between them.
 Query: Show all data for a student.
@@ -101,3 +99,54 @@ db.students_personal.aggregate({
 
 //output should be like below:
 { "_id" : ObjectId("5c21afcbb22ec61c09badb36"), "roll" : ObjectId("5c21afc9b22ec61c09badb35"), "name" : "AB", "father" : "MR. A", "mother" : "MR. B", "academic_information" : [ { "_id" : ObjectId("5c21afc9b22ec61c09badb35"), "result" : "A+", "fees" : "paid", "info_1" : "bla bla bla" } ] }
+
+
+
+
+--------------- Query to Remote MongoDB Database System -------------------
+
+step - 1: Download and Extract Mongo Shell
+---------------------------------------------------
+https://downloads.mongodb.org/win32/mongodb-shell-win32-x86_64-2008plus-ssl-4.0.5.zip
+
+1. Go to the download folder where the mongo shell downloaded.
+2. Extract the file
+3. Copy the extracted folder inside C drive
+
+step - 2: Configure and test the mongo shell
+--------------------------------------------------
+There are two ways to open the mongo shell.
+The following instructions are for windows only.
+1. Go inside the bin folder inside the mongo shell folder in the C drive.
+3. Copy the location path of the folder
+4. Right click on the my computer and select "properties"
+5. Click on the "advanced system settings"
+6. Click on "environment vairable"
+7. You will see two section. Scroll the lower section and find "path" under "variable" column.
+8. Select "path" and click edit.
+9. Paste the copied mongo shell location at the end of the path.
+10. Click save. Click ok for the rest of the dialogue.
+11. Right click on the desktop and open git bash
+12. Type "mongo --version" and press enter. It should output something like following.
+
+--------- Console Output ----------
+MongoDB shell version v4.0.5
+git version: 3739429dd92b92d1b0ab120911a23d50bf03c412
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: 2008plus-ssl
+    distarch: x86_64
+    target_arch: x86_64
+--------------
+
+step - 3: Connect to remote mongo database system.
+--------------------------------------------------
+Before performing this step contact with me and get your username and password.
+
+After getting your username and password type the following in mongo shell. Put your username in the the place of dash and press enter
+
+mongo "mongodb+srv://cluster0-t3qae.mongodb.net/test" --username _________
+
+If all goes well you should see be able to perform queries.
+

@@ -98,8 +98,7 @@ Many to Many
 একটি প্রোজেক্টে কি কি ডাটা থাকবে এবং ডাটাগুলোর মাঝে সম্পর্ক কেমন হবে সেটা চিত্রের মাধ্যমে প্রকাশ করা হয়। এই চিত্রকে বলা হয় Entity Relationship Diagram বা ERD.
 
 
-বিস্তারিত এখানে
-http://www.cs.uregina.ca/Links/class-info/215/erd/
+বিস্তারিত erd intro.txt ফাইলে।
 
 
 ERD নকশা ডাটাবেজ সিস্টেমে বাস্তবায়ন করা
