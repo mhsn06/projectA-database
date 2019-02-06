@@ -1,10 +1,52 @@
-Learn ERD
+This document describe basic of Entity relation Model Diagram and essentials tools to draw the diagrams.
+
+Step 1: Learn about ERD
+------------------------------
 http://jackzheng.net/teaching/archive/cis3730-2010-fall/files/1.5-erd.pdf
+
+Step 2(Optional): Learn More Here
+---------------------------------------
 http://www.cs.toronto.edu/~sme/CSC340F/slides/12-relationships.pdf
 http://www.cs.uregina.ca/Links/class-info/215/erd/
 https://ocw.mit.edu/courses/civil-and-environmental-engineering/1-204-computer-algorithms-in-systems-engineering-spring-2010/lecture-notes/MIT1_204S10_lec01.pdf
 
-ERD drawing online:
+Step 3: Open the ERD drawing tool online
+---------------------------------------------
+1. Open the following link in your browser.
 http://draw.io
+2. It may show "save diagram to" option. Click on the "Device" option.
+3. Click on the "Create New Diagram"
+4. Next No need to change any setting. Just click Create button
+5. A page will be open to draw.
+6. On the left side you will see the diagrams. Scroll down untill you find "Entity Relation"
+7. ERD diagrams will be shown. Just drag the diagram on the page and edit it as your need.
+8. When all done Click on "File" menu them "Export as" then "SVG". An svg file will be downloaded which can be opened by any browser.
 
+Step 4: Practice work
+----------------------
+Practice requirement: Design a database for students information management.
+
+Solution:
+Identifying entities and attributes:
+-----------------------------------------
+    Students (Name, Address, Phone No, Student Id, Session, Registration No)
+    Course (Course Name, Credit)
+    Result (first, second, third, fourth, fifth, sixth, seventh, eight)
+    Department(Name, Building, Floor)
+Identifying relations:
+------------------------------------------
+    1. One student may take multiple Course and A course can be taken by multiple student. Hence Students and Courses has many to many relation.
+    2. One student has only one result. Hence one to one relation.
+    3. A student belongs to only one department but department has many students. Hence one to many relation.
+    
+    Now draw the appropriate diagram.
+    
+    Put the file in the database repository.
+
+Step (Optional): Download the install the draw tool locally.
+-------------------------------------------------------------
+It'll make editing easier.
+1. Open the link in the browser.
 https://about.draw.io/integrations/#integrations_offline
+2. Scroll at the bottom of the page.
+3. Click on the windows icon.
