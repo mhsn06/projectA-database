@@ -1,0 +1,56 @@
+Practice Task 1
+----------------------
+Practice requirement:
+----------------------
+We want to store student's personal information and retrive the personal information of any student by id.
+
+Practice Solution:
+----------------------
+We perform the following tasks:
+(a)Identifying the entities, attributes and relation
+(b)Drawing ERD diagram
+(c)Writing database system queries
+
+(a)Identifying the entities and relation
+In this requirement we have only one entity which is student. The possible attributes are id, name, session, father's name, mother's name, address etc.
+As there is only one entity here no relation exists.
+
+(b)Drawing ERD diagram
+Draw a diagram like pratice_task_1_erd.jpg and name the file as pratice_task_1_erd_by_urname.svg
+
+(c)Writing queries for database management system
+Write query like pratice_task_1_query.jpg and name the file as pratice_task_1_query_by_urname.txt
+
+
+
+
+
+//ignore the following.
+
+Practice requirement:
+We want to store student's data of any institution and find information about student's progress
+
+
+Practice Solution:
+----------------------
+We have two task here.
+(a) Design a database for storing student's information.
+(b) Defining the queries to implement in a database system.
+
+
+Solution:
+Identifying entities and attributes:
+-----------------------------------------
+    Students (Name, Address, Phone No, Student Id, Session, Registration No)
+    Course (Course Name, Credit)
+    Result (first, second, third, fourth, fifth, sixth, seventh, eight)
+    Department(Name, Building, Floor)
+Identifying relations:
+------------------------------------------
+    1. One student may take multiple Course and A course can be taken by multiple student. Hence Students and Courses has many to many relation.
+    2. One student has only one result. Hence one to one relation.
+    3. A student belongs to only one department but department has many students. Hence one to many relation.
+    
+    Now draw the appropriate diagram.
+    
+    Put the file in the database repository.
