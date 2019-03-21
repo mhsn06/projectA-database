@@ -22,27 +22,6 @@ http://draw.io
 7. ERD diagrams will be shown. Just drag the diagram on the page and edit it as your need.
 8. When all done Click on "File" menu them "Export as" then "SVG". An svg file will be downloaded which can be opened by any browser.
 
-Step 4: Practice work
-----------------------
-Practice requirement: Design a database for students information management.
-
-Solution:
-Identifying entities and attributes:
------------------------------------------
-    Students (Name, Address, Phone No, Student Id, Session, Registration No)
-    Course (Course Name, Credit)
-    Result (first, second, third, fourth, fifth, sixth, seventh, eight)
-    Department(Name, Building, Floor)
-Identifying relations:
-------------------------------------------
-    1. One student may take multiple Course and A course can be taken by multiple student. Hence Students and Courses has many to many relation.
-    2. One student has only one result. Hence one to one relation.
-    3. A student belongs to only one department but department has many students. Hence one to many relation.
-    
-    Now draw the appropriate diagram.
-    
-    Put the file in the database repository.
-
 Step (Optional): Download the install the draw tool locally.
 -------------------------------------------------------------
 It'll make editing easier.
