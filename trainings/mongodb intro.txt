@@ -128,6 +128,8 @@ The following instructions are for windows only.
 10. Click save. Click ok for the rest of the dialogue.
 11. Right click on the desktop and open git bash
 12. Type "mongo --version" and press enter. It should output something like following.
+13. If you see any missing error, download & install the following program.
+https://www.microsoft.com/en-in/download/details.aspx?id=48145
 
 --------- Console Output ----------
 MongoDB shell version v4.0.5
