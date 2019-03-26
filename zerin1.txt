@@ -1,0 +1,17 @@
+db.personal_information.insert({ "Name" : "a", 
+"Father's Name" : "b", 
+"Mother's Name" : "c", 
+"Address" : "d", 
+"Phone No" : "e", 
+"Email" : "f"})
+
+db.personal_information.find({
+"Name" : "a"})
+
+db.academic_information.insert({
+"Session" : "x",
+"ID" : "y"})
+
+
+db.academic_information.find({
+"ID" : "y"})
