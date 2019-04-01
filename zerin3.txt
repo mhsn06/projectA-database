@@ -1,0 +1,34 @@
+relation_ref = ObjectId()
+
+db.personal_information.insert({
+	"Roll" : relation_ref,
+	"Name" : "a",
+	"Father's Name" : "b",
+	"Mother's Name" : "c",
+	"Address" : "d",
+	"Phone No" : "e",
+	"Email" : "f",
+})
+
+db.course.insert({
+	"Name" : relation_ref,
+	"Course Name" : "g",
+	"Credit" : "h",
+	"Book List" : "k",
+})
+
+db.personal_information.aggregate({
+$lookup:{
+	from: "course",
+	localField: "Name",
+	foreignField: "Roll",
+	as : "academic_information"
+	}
+})
+
+db.personal_information.find({
+ "Name" : "a"
+})
+
+
+
