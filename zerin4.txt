@@ -1,0 +1,33 @@
+relation_ref = ObjectId()
+
+db.user.insert({
+	"id" : relation_ref,
+	"name" : "a"
+	"username" : "b"
+	"email" : "c"
+	"address" : "d"
+	"password" : "e"
+})
+
+db.session.insert({
+	"userid" : relation_ref
+	"session_key" : "g"
+	"expired_date: "h"
+	"device" : "i"
+})
+
+db.user.aggregate({
+$lookup:{
+	from: "session",
+	localField: "userid",
+	foreignField: "id",
+	as : "academic_information"
+	}
+})
+
+db.personal_information.find({
+	"email" : "c"
+})
+
+
+
